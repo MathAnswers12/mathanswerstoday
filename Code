@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Math Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .math-question {
+            margin-bottom: 20px;
+        }
+        
+        .math-answer {
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 20px;
+        }
+        
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Math Website</h1>
+        <div class="math-question">
+            <label for="question">Enter your math question:</label>
+            <input type="text" id="question" placeholder="e.g., What is 2 * 2?" />
+            <button class="submit-button" onclick="answerMathQuestion()">Submit</button>
+        </div>
+        <div class="math-answer" id="answer"></div>
+    </div>
+
+    <script>
+        function answerMathQuestion() {
+            var questionInput = document.getElementById("question");
+            var answerDiv = document.getElementById("answer");
+            var question = questionInput.value;
+            var answer = calculateAnswer(question);
+            answerDiv.innerHTML = "Answer: " + answer;
+        }
+
+        function calculateAnswer(question) {
+            // AI logic to calculate the answer based on the question
+            // You can use JavaScript math libraries or write your own logic here
+            // For simplicity, let's assume the AI can handle basic arithmetic operations
+            return eval(question);
+        }
+    </script>
+</body>
+</html>
+
